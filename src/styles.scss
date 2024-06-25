@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --background-color: #fff; /* Light theme default */
+    --text-color: #000; /* Light theme default */
+    --primary-color: #007bff; /* Light theme default (example) */
+    --accent-color: #ffc107; /* Light theme default (example) */
+    /* Add more varia   bles for other colors you want to toggle */
+  }
+
+.purple-text {
+    color: #6941C6;
+}
+
+.chip {
+  border-radius: 50rem;
+  padding: 0.2rem 0.8rem;
+  font-size: 14px !important;
+}
+
+.chip-1 {
+  background-color: #F9F5FF;
+  color: #6941C6;
+}
+
+.chip-2 {
+  background-color: #EEF4FF;
+  color: #3538CD;
+}
+
+.chip-3 {
+  background-color: #FDF2FA;
+  color: #C11574;
+}
+
+.chip-4 {
+  background-color: #F0F9FF;
+  color: #026AA2;
+}
+
+.chip-5 {
+  background-color: #ECFDF3;
+  color: #027A48;
+}
+
+.chip-6 {
+  background-color: #F8F9FC;
+  color: #363F72;
+}
+
+.chip-7 {
+  background-color: #FFF6ED;
+  color: #C4320A;
+}
+
+.chip-8 {
+  background-color: #FFF1F3;
+  color: #C01048;
+}

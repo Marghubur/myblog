@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold navbar-text" href="javascript:void(0)">Marghubur Rahman</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link navbar-text active" aria-current="page" href="javascript:void(0)" [routerLink]="['/home']" routerLinkActive="router-link-active" >Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-text active" aria-current="page" href="javascript:void(0)" [routerLink]="['/videos']" routerLinkActive="router-link-active" >Videos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-text active" aria-current="page" href="javascript:void(0)" [routerLink]="['/books']" routerLinkActive="router-link-active" >Books</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-text active" aria-current="page" href="javascript:void(0)">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-text active" aria-current="page" href="javascript:void(0)">Newsletter</a>
+          </li>
+          <li class="nav-item">
+            @if (isNightMode) {
+              <a class="nav-link navbar-text active" aria-current="page" href="javascript:void(0)" (click)="changeMode()">
+                  <i class="fa-solid fa-toggle-on fa-xl"></i>
+              </a>
+            }
+            @else {
+              <a class="nav-link navbar-text active" aria-current="page" href="javascript:void(0)" (click)="changeMode()">
+                  <i class="fa-solid fa-toggle-off fa-xl"></i>
+              </a>
+            }
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

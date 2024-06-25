@@ -1,0 +1,13 @@
+<div class="my-4">
+    <hr>
+    <span class="me-3">
+        <i class="fa-regular fa-copyright me-1"></i>
+        {{currentYear}}
+    </span>
+    @for (item of socialMediaDetail; track item.Name) {
+        <a href="javascript:void(0)" class="text-decoration-none me-3">
+            <i [class]="item.Icon" class="me-1"></i>
+            {{item.Name}}
+        </a>
+    }
+</div>

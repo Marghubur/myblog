@@ -1,0 +1,55 @@
+<div class="blog_main_title border-bottom border-top border-3 border-dark mt-4">
+    THE BLOG
+</div>
+<div class="fs-24 fw-bold mt-4 py-3">
+    Recent blog posts
+</div>
+@if (isPageReady) {
+    <div class="row">
+        <div class="col-md-6">
+            <app-blog-card [data]="RecentBlogs[0]" [className]="'col-md-12'">
+                <div image>
+                    <img [src]="RecentBlogs[0].Images" alt="" class="img-fluid lg-card-img">
+                </div>
+            </app-blog-card>
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-12">
+                <app-blog-card [data]="RecentBlogs[1]" [className]="'col-md-6'">
+                    <div image>
+                        <img [src]="RecentBlogs[1].Images" alt="" class="img-fluid sm-card-img">
+                    </div>
+                </app-blog-card>
+            </div>
+            <div class="col-md-12">
+                <app-blog-card [data]="RecentBlogs[2]" [className]="'col-md-6'">
+                    <div image>
+                        <img [src]="RecentBlogs[2].Images" alt="" class="img-fluid sm-card-img">
+                    </div>
+                </app-blog-card>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 mt-5">
+        <app-blog-card [data]="RecentBlogs[0]" [className]="'col-md-6'">
+            <div image>
+                <img [src]="RecentBlogs[0].Images" alt="" class="img-fluid sm-card-img">
+            </div>
+        </app-blog-card>
+    </div>
+    <div class="fs-24 fw-bold mt-4 py-3">
+        All blog posts
+    </div>
+    <div class="row">
+        @for (item of RecentBlogs; track item.BlogId) {
+            <div class="col-md-4">
+                <app-blog-card [data]="item" [className]="'col-md-12'">
+                    <div image>
+                        <img [src]="item.Images" alt="" class="img-fluid md-card-img">
+                    </div>
+                </app-blog-card>
+            </div>
+        }
+    </div>
+}
+<app-scroll-top-button></app-scroll-top-button>

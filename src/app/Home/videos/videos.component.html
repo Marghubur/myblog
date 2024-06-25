@@ -1,0 +1,109 @@
+@if (isPageReady) {
+  <div class="row align-items-center">
+    <div class="col-md-3 my-3">
+      <label class="form-label">Video Type</label>
+      <select class="form-select" [(ngModel)]="videoType" (change)="filterByVideoType()">
+        @for (item of videoTypes | keyvalue; track item) {
+          <option value="{{item.key}}">{{item.value}}</option>
+        }
+      </select>
+    </div>
+    <div class="col-md-3 my-3">
+      <label class="form-label">Search by title name</label>
+      <input type="text" class="form-control" placeholder="Search ..." (keyup.enter)="filterByTitle()" (keydown.esc)="resetFilter()">
+    </div>
+    <div class="col-auto ms-auto">
+      <button class="btn btn-danger" (click)="resetFilter()">Reset</button>
+    </div>
+  </div>
+  <div class="row">
+    @if (videosList.length > 0) {
+      @for (item of videosList; track item.VideoId) {
+        <div class="col-md-3 mb-5">
+            <iframe height="100%" width="100%" [attr.src]="item.VideoURL" allowfullscreen></iframe> 
+            <h5 class="text-truncate" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">{{item.Title}}</h5> 
+            <span class="chip my-3 fw-semibold" [ngClass]="getRandomColor()"># {{item.TypeName}}</span>
+        </div>
+      }
+    }
+    @else {
+      <h2 class="fw-bold text-dark text-center py-5 my-5">Record not found.</h2>
+    }
+      
+  </div>  
+} @else {
+  <div class="row">
+      <div class="col-md-3">
+          <div class="card" aria-hidden="true">
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title placeholder-glow">
+                  <span class="placeholder col-6"></span>
+                </h5>
+                <p class="card-text placeholder-glow">
+                  <span class="placeholder col-7"></span>
+                  <span class="placeholder col-4"></span>
+                  <span class="placeholder col-4"></span>
+                  <span class="placeholder col-6"></span>
+                  <span class="placeholder col-8"></span>
+                </p>
+                <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+              </div>
+            </div>
+      </div>
+      <div class="col-md-3">
+          <div class="card" aria-hidden="true">
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title placeholder-glow">
+                  <span class="placeholder col-6"></span>
+                </h5>
+                <p class="card-text placeholder-glow">
+                  <span class="placeholder col-7"></span>
+                  <span class="placeholder col-4"></span>
+                  <span class="placeholder col-4"></span>
+                  <span class="placeholder col-6"></span>
+                  <span class="placeholder col-8"></span>
+                </p>
+                <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+              </div>
+            </div>
+      </div>
+      <div class="col-md-3">
+          <div class="card" aria-hidden="true">
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title placeholder-glow">
+                  <span class="placeholder col-6"></span>
+                </h5>
+                <p class="card-text placeholder-glow">
+                  <span class="placeholder col-7"></span>
+                  <span class="placeholder col-4"></span>
+                  <span class="placeholder col-4"></span>
+                  <span class="placeholder col-6"></span>
+                  <span class="placeholder col-8"></span>
+                </p>
+                <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+              </div>
+            </div>
+      </div>
+      <div class="col-md-3">
+          <div class="card" aria-hidden="true">
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title placeholder-glow">
+                  <span class="placeholder col-6"></span>
+                </h5>
+                <p class="card-text placeholder-glow">
+                  <span class="placeholder col-7"></span>
+                  <span class="placeholder col-4"></span>
+                  <span class="placeholder col-4"></span>
+                  <span class="placeholder col-6"></span>
+                  <span class="placeholder col-8"></span>
+                </p>
+                <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+              </div>
+            </div>
+      </div>
+  </div>
+}

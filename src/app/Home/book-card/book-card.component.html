@@ -1,0 +1,15 @@
+<div class = book-container>
+    <div class =book-card>
+      <div class = image>
+        <img href="javascript:void(0)" [src] = "data.ImgUrl">
+      </div>
+      <div class = content>
+        <h3 class="text-truncate-container view-book-link">
+            <a href="javascript:void(0)" class="text-decoration-none text-dark" (click)="viewBook(data)">
+                {{data.Title}}
+            </a>
+        </h3>
+        <p class="text-trucate">{{data.Content}}</p>
+      </div>
+    </div>    
+  </div>
